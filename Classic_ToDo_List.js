@@ -70,13 +70,13 @@ class ToDo  {
             TextDiv.className = 'ItemText';
             TextDiv.innerHTML = element.Title;
             
-            let CompeleteBtn = document.createElement('button');
-            CompeleteBtn.className = 'CompeleteItem';
+            let CompleteBtn = document.createElement('button');
+            CompleteBtn.className = 'CompeleteItem';
     
             element.condition ? TextDiv.classList.add('compeleteCondition') : TextDiv.classList.remove('compeleteCondition');
-            element.condition ? (CompeleteBtn.innerHTML = `Uncomplete`) : (CompeleteBtn.innerHTML = `Complete`);
+            element.condition ? (CompleteBtn.innerHTML = `Uncomplete`) : (CompleteBtn.innerHTML = `Complete`);
 
-            CompeleteBtn.addEventListener('click', () => {
+            CompleteBtn.addEventListener('click', () => {
                 element.condition = !element.condition;
 
                 this.saveToDoInStorage();
@@ -96,7 +96,7 @@ class ToDo  {
                 this.ToDoInList();
             })
 
-            MainDiv.append(TextDiv,CompeleteBtn,DeleteBtn);
+            MainDiv.append(TextDiv,CompleteBtn,DeleteBtn);
 
             this.container.append(MainDiv);
         });
