@@ -23,12 +23,6 @@ class ToDo  {
             }
         });
 
-        window || document.documentElement || document.body.addEventListener('keyup', e => {
-            if(this.InputTxt.value != "" && e.which == 13) {
-                this.AddNewItem(this.InputTxt.value)
-            }
-        });
-
         this.clearButton.addEventListener('click' , () => {
             this.DeleteAllItems()
         });
