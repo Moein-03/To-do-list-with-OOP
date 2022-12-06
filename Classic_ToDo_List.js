@@ -74,7 +74,7 @@ class ToDo  {
             CompeleteBtn.className = 'CompeleteItem';
     
             element.condition ? TextDiv.classList.add('compeleteCondition') : TextDiv.classList.remove('compeleteCondition');
-            element.condition ? (CompeleteBtn.innerHTML = `Uncompelete`) : (CompeleteBtn.innerHTML = `Compelete`);
+            element.condition ? (CompeleteBtn.innerHTML = `Uncomplete`) : (CompeleteBtn.innerHTML = `Complete`);
 
             CompeleteBtn.addEventListener('click', () => {
                 element.condition = !element.condition;
